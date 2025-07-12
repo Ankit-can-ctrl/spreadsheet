@@ -332,7 +332,7 @@ const SpreadsheetTable: React.FC = () => {
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {data.map((row, index) => (
+            {data.map((row) => (
               <tr key={row.id} className="hover:bg-gray-50">
                 <td className="w-8 px-2 py-4 text-sm  text-center text-gray-500 border-r border-gray-200">
                   {row.id}
@@ -380,7 +380,7 @@ const SpreadsheetTable: React.FC = () => {
             {/* Empty rows */}
             {Array.from({ length: 10 }, (_, i) => (
               <tr key={`empty-${i}`} className="hover:bg-gray-50">
-                <td className="w-8 px-2 py-4 text-sm text-gray-500 border-r border-gray-200">
+                <td className="w-8 px-2 py-4 text-center text-sm text-gray-500 border-r border-gray-200">
                   {data.length + i + 1}
                 </td>
                 <td className="px-4 py-4 border-r border-gray-200"></td>
